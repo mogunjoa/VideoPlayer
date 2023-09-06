@@ -59,7 +59,17 @@ class _Controls extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: [],
+      children: [
+        renderIconButton(onPressed: () {
+
+        }, iconData: Icons.rotate_left),
+        renderIconButton(onPressed: () {
+
+        }, iconData: Icons.play_arrow),
+        renderIconButton(onPressed: () {
+
+        }, iconData: Icons.rotate_right),
+      ],
     );
   }
 
