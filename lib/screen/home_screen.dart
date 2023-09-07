@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Center(
       child: CustomVideoPlayer(
         video: video!,
+        onNewVideoPressed: onNewVideoPressed,
       ),
     );
   }
@@ -35,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           _Logo(
-            onTap: onTitleTap,
+            onTap: onNewVideoPressed,
           ),
           SizedBox(
             height: 15,
@@ -46,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void onTitleTap() async {
+  void onNewVideoPressed() async {
     final video = await ImagePicker().pickVideo(
       source: ImageSource.gallery,
     );
